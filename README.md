@@ -1,3 +1,14 @@
+For this assignment we utilized node for the first time to:
+
+  * Create README.MD generator using a template and the fs module
+  * Using the inquirer module to collect information to put into the template
+  * Using the AXIOS module to pull from the github API and add to the template
+
+
+This assignment when well for the most part.  I lost valuable time finding a bug where I had "username" instead of "userName".  I did add the current date to the name of the file created. I used \n a bunch and I don't think I needed to, whoops. I would have like to make the API call modular just like generateMarkdown, I will attempt it after submitting.
+
+
+
 # Unit 09 Node.js and ES6+ Homework: Good README Generator
 
 Create a command-line application that dynamically generates a README.md from a user's input. The application will be invoked with the following command:

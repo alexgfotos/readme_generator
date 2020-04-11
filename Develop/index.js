@@ -1,12 +1,20 @@
+// node modules beings used
 const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+
+// inquirer questions to gather data for readme
 inquirer.prompt([{
     type: "input",
     message: "What is your Git username?",
     name: "userName"
+},
+{
+    type: "input",
+    message: "What are you good at?",
+    name: "good"
 },
 {
     type: "input",
@@ -42,23 +50,16 @@ inquirer.prompt([{
     type: "input",
     message: "What are the tests?",
     name: "tests"
-},
-
-
+}
 ])
-.then(function(answers, data){
-    axios.get(`https://api.github.com/users/${answers.username}?access_token=08a667f2fa139c0b261cef5364c5b33b43751a6e`).then(function(data){
-    generateMarkdown(answers, data);
-    // console.log(data);   
+// after prompting user, run AXIOS API call and generate markdown
+.then(function(answers){
+
+    axios.get(`https://api.github.com/users/${answers.userName}?access_token=19a9f5bc0f822f24338518a1cf74e029c8df67f1`).then(function(response){
+    generateMarkdown(answers, response);
+    console.log(response.data.avatar_url);   
     });
        
 })
 
 
-
-
-function init() {
-
-}
-
-init();

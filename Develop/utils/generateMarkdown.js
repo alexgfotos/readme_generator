@@ -1,21 +1,27 @@
+// node modules beings used
 const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
 const index = require("../index");
+// variables to pull today's date for naming readme file
+const today = new Date();  
+const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
-function generateMarkdown(answers, data) {
+// function to write a readme file with prompts and api calls
+function generateMarkdown(answers, response) {
   // console.log(data);
-  fs.appendFile("read.md",
+  fs.appendFile(`${date}_readme.md`,
     `# ${answers.title}
-    \nDescription
+    \n${answers.description}
     
     \n# Table of Contents
-      \n* Installation
-      \n* Usage
-      \n* License
-      \n* Contributing
-      \n* Tests
-      \n* Questions    
+      \n* [Installation](#Installation)
+      \n* [Usage](#Usage)
+      \n* [Credits](#Credits)
+      \n* [License](#License)
+      \n* [Contributing](#Contributing)
+      \n* [Tests](#Tests)
+      \n* [Questions](#Questions)    
     
     \n# Installation
     \n${answers.install}
@@ -35,12 +41,8 @@ function generateMarkdown(answers, data) {
 
     \nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     
-    \n##Badges
-    
-    
-    
-  
-    \n# Contributor Covenant Code of Conduct
+    \n# Contributing
+    \n## Contributor Covenant Code of Conduct
 
     ## Our Pledge
 
@@ -102,7 +104,7 @@ function generateMarkdown(answers, data) {
 
     Instances of abusive, harassing, or otherwise unacceptable behavior may be
     reported to the community leaders responsible for enforcement at
-    [INSERT CONTACT METHOD].
+    ${response.data.email}.
     All complaints will be reviewed and investigated promptly and fairly.
 
     All community leaders are obligated to respect the privacy and security of the
@@ -169,17 +171,20 @@ function generateMarkdown(answers, data) {
     https://www.contributor-covenant.org/faq. Translations are available at
     https://www.contributor-covenant.org/translations.
     
-    \n#Tests
+    \n# Tests
     \n${answers.tests}
 
-    \n#For questions, contact:
+    \n# Questions
+    
+    ##For questions, contact:
 
-    \navatar here${data.avatar_url}
-    \ngithub email here ${data.email}
+    ![Github Avatar](${response.data.avatar_url})
+    ## Email: ${response.data.email}
+    ![User Badge](https://img.shields.io/badge/Good%20at-${answers.good}-green/)
     `
     , (err) => {
       if (err) throw err;
-      console.log('The "data to append" was appended to file!');
+      console.log('Your readme.md has been created!');
     });
 }
 
