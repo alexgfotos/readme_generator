@@ -1,46 +1,59 @@
-const fs = require("fs");
-const inquirer = require("inquirer");
-const axios = require("axios");
-const index = require("../index");
+#handburgers
+    
+Description
+    
+    
+#Table of Contents (Optional)
+      
+* Installation
+      
+* Usage
+      
+* License
+      
+* Contributing
+      
+* Tests
+      
+* Questions    
+    
+    
+#Installation
+    
+none
+    
+    
+#Usage
+    
+none
+    
+    
+#Credits
+    
+jesus were integral in the development of this project!
+    
+    
+#License
+    
+Copyright (c) 2020 god dog
 
-function generateMarkdown(answers, data) {
-  // console.log(data);
-  fs.appendFile("read.md",
-    `#${answers.title}
-    \nDescription
     
-    \n#Table of Contents (Optional)
-      \n* Installation
-      \n* Usage
-      \n* License
-      \n* Contributing
-      \n* Tests
-      \n* Questions    
-    
-    \n#Installation
-    \n${answers.install}
-    
-    \n#Usage
-    \n${answers.usage}
-    
-    \n#Credits
-    \n${answers.contributors} & ${answers.license} were integral in the development of this project!
-    
-    \n#License
-    \nCopyright (c) 2020 ${answers.license}
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-    \nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-    \nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-    \nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     
-    \n##Badges
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    
+    
+##Badges
     
     
     
   
-    \n# Contributor Covenant Code of Conduct
+    
+# Contributor Covenant Code of Conduct
 
     ## Our Pledge
 
@@ -169,18 +182,16 @@ function generateMarkdown(answers, data) {
     https://www.contributor-covenant.org/faq. Translations are available at
     https://www.contributor-covenant.org/translations.
     
-    \n#Tests
-    \n${answers.tests}
+    
+#Tests
+    
+n/a
 
-    \n#For questions, contact:
+    
+#For questions, contact:
 
-    \navatar here${data.avatar_url}
-    \ngithub email here ${data.email}
-    `
-    , (err) => {
-      if (err) throw err;
-      console.log('The "data to append" was appended to file!');
-    });
-}
-
-module.exports = generateMarkdown;
+    
+avatar hereundefined
+    
+github email here undefined
+    

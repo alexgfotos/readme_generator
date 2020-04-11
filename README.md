@@ -24,7 +24,6 @@ The README will be populated with the following:
   * User GitHub email
 
 Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
-
 ```
 AS A developer
 
