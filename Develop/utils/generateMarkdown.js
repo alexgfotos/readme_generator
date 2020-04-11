@@ -6,10 +6,10 @@ const index = require("../index");
 function generateMarkdown(answers, data) {
   // console.log(data);
   fs.appendFile("read.md",
-    `#${answers.title}
+    `# ${answers.title}
     \nDescription
     
-    \n#Table of Contents (Optional)
+    \n# Table of Contents
       \n* Installation
       \n* Usage
       \n* License
@@ -17,16 +17,16 @@ function generateMarkdown(answers, data) {
       \n* Tests
       \n* Questions    
     
-    \n#Installation
+    \n# Installation
     \n${answers.install}
     
-    \n#Usage
+    \n# Usage
     \n${answers.usage}
     
-    \n#Credits
+    \n# Credits
     \n${answers.contributors} & ${answers.license} were integral in the development of this project!
     
-    \n#License
+    \n# License
     \nCopyright (c) 2020 ${answers.license}
 
     \nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
