@@ -55,11 +55,10 @@ inquirer.prompt([{
 // after prompting user, run AXIOS API call and generate markdown
 .then(function(answers){
 
-    axios.get(`https://api.github.com/users/${answers.userName}?access_token=19a9f5bc0f822f24338518a1cf74e029c8df67f1`).then(function(response){
+    axios.get(`https://api.github.com/users/${answers.userName}?access_token=eaf146335ab28170b2afb28155f6f651540b29f7`).then(function(response){
     generateMarkdown(answers, response);
     console.log(response.data.avatar_url);   
     });
        
 })
-
 

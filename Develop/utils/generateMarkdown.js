@@ -11,10 +11,10 @@ const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 function generateMarkdown(answers, response) {
   // console.log(data);
   fs.appendFile(`${date}_readme.md`,
-    `# ${answers.title}
+  `# ${answers.title}
     \n${answers.description}
     
-    \n# Table of Contents
+  \n# Table of Contents
       \n* [Installation](#Installation)
       \n* [Usage](#Usage)
       \n* [Credits](#Credits)
@@ -23,16 +23,16 @@ function generateMarkdown(answers, response) {
       \n* [Tests](#Tests)
       \n* [Questions](#Questions)    
     
-    \n# Installation
+  \n# Installation
     \n${answers.install}
     
-    \n# Usage
+  \n# Usage
     \n${answers.usage}
     
-    \n# Credits
+  \n# Credits
     \n${answers.contributors} & ${answers.license} were integral in the development of this project!
     
-    \n# License
+  \n# License
     \nCopyright (c) 2020 ${answers.license}
 
     \nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -41,10 +41,11 @@ function generateMarkdown(answers, response) {
 
     \nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     
-    \n# Contributing
-    \n## Contributor Covenant Code of Conduct
+  \n# Contributing
 
-    ## Our Pledge
+  # Contributor Covenant Code of Conduct
+
+  ## Our Pledge
 
     We as members, contributors, and leaders pledge to make participation in our
     community a harassment-free experience for everyone, regardless of age, body
@@ -56,7 +57,7 @@ function generateMarkdown(answers, response) {
     We pledge to act and interact in ways that contribute to an open, welcoming,
     diverse, inclusive, and healthy community.
 
-    ## Our Standards
+  ## Our Standards
 
     Examples of behavior that contributes to a positive environment for our
     community include:
@@ -80,7 +81,7 @@ function generateMarkdown(answers, response) {
     * Other conduct which could reasonably be considered inappropriate in a
       professional setting
 
-    ## Enforcement Responsibilities
+  ## Enforcement Responsibilities
 
     Community leaders are responsible for clarifying and enforcing our standards of
     acceptable behavior and will take appropriate and fair corrective action in
@@ -92,7 +93,7 @@ function generateMarkdown(answers, response) {
     not aligned to this Code of Conduct, and will communicate reasons for moderation
     decisions when appropriate.
 
-    ## Scope
+  ## Scope
 
     This Code of Conduct applies within all community spaces, and also applies when
     an individual is officially representing the community in public spaces.
@@ -100,7 +101,7 @@ function generateMarkdown(answers, response) {
     posting via an official social media account, or acting as an appointed
     representative at an online or offline event.
 
-    ## Enforcement
+  ## Enforcement
 
     Instances of abusive, harassing, or otherwise unacceptable behavior may be
     reported to the community leaders responsible for enforcement at
@@ -110,12 +111,12 @@ function generateMarkdown(answers, response) {
     All community leaders are obligated to respect the privacy and security of the
     reporter of any incident.
 
-    ## Enforcement Guidelines
+  ## Enforcement Guidelines
 
     Community leaders will follow these Community Impact Guidelines in determining
     the consequences for any action they deem in violation of this Code of Conduct:
 
-    ### 1. Correction
+  ### 1. Correction
 
     **Community Impact**: Use of inappropriate language or other behavior deemed
     unprofessional or unwelcome in the community.
@@ -124,7 +125,7 @@ function generateMarkdown(answers, response) {
     clarity around the nature of the violation and an explanation of why the
     behavior was inappropriate. A public apology may be requested.
 
-    ### 2. Warning
+  ### 2. Warning
 
     **Community Impact**: A violation through a single incident or series
     of actions.
@@ -136,7 +137,7 @@ function generateMarkdown(answers, response) {
     like social media. Violating these terms may lead to a temporary or
     permanent ban.
 
-    ### 3. Temporary Ban
+  ### 3. Temporary Ban
 
     **Community Impact**: A serious violation of community standards, including
     sustained inappropriate behavior.
@@ -147,7 +148,7 @@ function generateMarkdown(answers, response) {
     with those enforcing the Code of Conduct, is allowed during this period.
     Violating these terms may lead to a permanent ban.
 
-    ### 4. Permanent Ban
+  ### 4. Permanent Ban
 
     **Community Impact**: Demonstrating a pattern of violation of community
     standards, including sustained inappropriate behavior,  harassment of an
@@ -156,7 +157,7 @@ function generateMarkdown(answers, response) {
     **Consequence**: A permanent ban from any sort of public interaction within
     the community.
 
-    ## Attribution
+  ## Attribution
 
     This Code of Conduct is adapted from the [Contributor Covenant][homepage],
     version 2.0, available at
@@ -171,16 +172,15 @@ function generateMarkdown(answers, response) {
     https://www.contributor-covenant.org/faq. Translations are available at
     https://www.contributor-covenant.org/translations.
     
-    \n# Tests
+  \n# Tests
     \n${answers.tests}
 
-    \n# Questions
-    
-    ##For questions, contact:
+  \n# Questions 
+  ## For questions, contact:
 
-    ![Github Avatar](${response.data.avatar_url})
-    ## Email: ${response.data.email}
-    ![User Badge](https://img.shields.io/badge/Good%20at-${answers.good}-green/)
+  ![Github Avatar](${response.data.avatar_url})
+  ## Email: ${response.data.email}
+  ![User Badge](https://img.shields.io/badge/Good%20at-${answers.good}-green/)
     `
     , (err) => {
       if (err) throw err;

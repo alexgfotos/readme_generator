@@ -7,6 +7,10 @@ For this assignment we utilized node for the first time to:
 
 This assignment when well for the most part.  I lost valuable time finding a bug where I had "username" instead of "userName".  I did add the current date to the name of the file created. I used \n a bunch and I don't think I needed to, whoops. I would have like to make the API call modular just like generateMarkdown, I will attempt it after submitting.
 
+Demo:
+
+![demo of the generator](Develop/Images/demo.gif)
+
 
 
 # Unit 09 Node.js and ES6+ Homework: Good README Generator
